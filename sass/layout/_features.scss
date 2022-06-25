@@ -1,0 +1,32 @@
+.features {
+  padding-top: 94px;
+
+  &__list {
+    @include flex(space-between);
+  }
+
+  &__top {
+    @include flex(center, center);
+
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+
+    background-color: #f5f4fa;
+    border-radius: 4px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+
+    @include font-style(false, 16px, 0.03em, 700, uppercase);
+  }
+
+  &__text {
+    max-width: 270px;
+
+    @include font-style(false, 24px, 0.03em, 400);
+
+    color: $secondary-color-grey;
+  }
+}

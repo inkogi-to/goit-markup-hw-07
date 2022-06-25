@@ -1,0 +1,97 @@
+.header {
+  border-bottom: 1px solid #ececec;
+
+  &__top {
+    @include flex(space-between);
+  }
+}
+
+.header-nav {
+  @include flex(center);
+
+  &__logo {
+    padding: 24px 0 24px;
+  }
+
+  &__text {
+    color: $primary-color-blue;
+  }
+}
+
+.header-menu {
+  @include flex(false, center);
+  margin-left: 93px;
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  &__link {
+    display: block;
+
+    @include font-style(14px, 16px, 0.02em, 500);
+
+    color: $primary-color;
+
+    @include transition(color);
+    &:hover {
+      color: $primary-color-blue;
+    }
+  }
+
+  &__link--active {
+    position: relative;
+    color: $primary-color-blue;
+  }
+
+  &__link--active::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 45px;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+
+    border-radius: 2px;
+
+    background-color: $primary-color-blue;
+  }
+}
+
+.header-contacts {
+  padding: 32px 0 32px;
+
+  @include font-style(14px, 16px, 0.02em, 500);
+
+  color: $secondary-color-grey;
+
+  &__email {
+    margin-right: 30px;
+  }
+
+  &__icon {
+    margin-right: 10px;
+    vertical-align: middle;
+
+    fill: $secondary-color-grey;
+
+    @include transition(fill);
+  }
+}
+
+.contacts-hover {
+  @include transition(fill);
+  @include transition(color);
+}
+
+.contacts-hover:hover .header-contacts__icon,
+.contacts-hover:focus .header-contacts__icon {
+  fill: $primary-color-blue;
+}
+
+.contacts-hover:hover,
+.contacts-hover:focus {
+  color: $primary-color-blue;
+  fill: $primary-color-blue;
+}

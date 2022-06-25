@@ -1,0 +1,40 @@
+.clients {
+  &__top-title {
+    margin-bottom: 50px;
+
+    @include font-style(36px, 42px, 0.03em, 700);
+    text-align: center;
+  }
+
+  &__list {
+    @include flex(space-between);
+  }
+
+  &__link {
+    @include flex(center, center);
+
+    width: 170px;
+    height: 92px;
+
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+
+    color: #afb1b8;
+
+    @include transition(border);
+
+    &:hover,
+    &:focus {
+      border: 1px solid $primary-color-blue;
+    }
+  }
+
+  &__icon {
+    fill: currentColor;
+    @include transition(fill);
+    :hover > &,
+    :focus > & {
+      fill: $primary-color-blue;
+    }
+  }
+}

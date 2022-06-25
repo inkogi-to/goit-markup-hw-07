@@ -1,0 +1,95 @@
+.footer {
+  padding: 60px 0;
+
+  color: $white-color;
+  background-color: #2f303a;
+
+  &__inner {
+    @include flex();
+  }
+  &__link {
+    color: $white-color;
+  }
+}
+
+.socials {
+  margin-left: 70px;
+  margin-right: 93px;
+
+  &_title {
+    margin-bottom: 20px;
+
+    @include font-style(14px, 16px, 0.03em, 700, uppercase);
+  }
+
+  &__list {
+    display: flex;
+
+    color: $white-color;
+  }
+
+  &__link {
+    background-color: rgba(255, 255, 255, 0.1);
+    @include flex(center, center);
+    padding: 12px;
+    border-radius: 50%;
+    @include transition(background-color);
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+    &:hover,
+    &:focus {
+      background-color: $primary-color-blue;
+    }
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+}
+
+.subscription {
+  &__title {
+    margin-bottom: 20px;
+    @include font-style(14px, 16px, 0.03em, 700, uppercase);
+  }
+
+  &__form {
+    @include flex(center);
+  }
+
+  &__email {
+    width: 357px;
+    padding: 15px 0 15px 16px;
+    margin-right: 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+
+    background-color: transparent;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    &::placeholder {
+      font-family: 'Roboto';
+      @include font-style(16px, 20px, 0.03em, 400);
+
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  &__btn {
+    @include flex(false, center);
+
+    @include button;
+    padding-right: 28px;
+    padding-left: 29px;
+
+    @include font-style(16px, 30px, 0.06em, 700);
+  }
+
+  &__icon {
+    margin-left: 10px;
+    fill: $white-color;
+  }
+}

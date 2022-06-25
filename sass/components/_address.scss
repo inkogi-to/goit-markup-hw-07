@@ -1,0 +1,16 @@
+.address {
+  margin-top: 20px;
+
+  min-width: 220px;
+
+  @include font-style(14px, 24px, 0.03em, 400, false, normal);
+
+  &__item:not(:last-child) {
+    margin: 9px 0 9px;
+  }
+
+  &__email,
+  &__tel {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}

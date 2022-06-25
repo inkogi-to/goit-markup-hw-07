@@ -1,0 +1,75 @@
+.team {
+  background-color: #f5f4fa;
+
+  &__top-title {
+    margin-bottom: 50px;
+
+    @include font-style(36px, 42px, 0.03em, 700);
+    text-align: center;
+  }
+
+  &__list {
+    @include flex(space-between);
+  }
+
+  &__item {
+    border-radius: 0px 0px 4px 4px;
+
+    @include font-style(16px, 19px, 0.03em);
+
+    background-color: $white-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  &__content {
+    @include flex(false, center, column);
+    padding: 30px 0 30px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+
+    text-align: center;
+    font-weight: 500;
+  }
+
+  &__subtitle {
+    margin-bottom: 16px;
+
+    font-weight: 400;
+    text-align: center;
+
+    color: $secondary-color-grey;
+  }
+
+  &__socials {
+    @include flex(center);
+    color: #afb1b8;
+  }
+
+  &__social-link {
+    @include flex(center, center);
+
+    padding: 12px;
+
+    border-radius: 50%;
+    @include transition(background-color);
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+    &:hover,
+    &:focus {
+      background-color: $primary-color-blue;
+    }
+  }
+
+  &__social-icon {
+    fill: currentColor;
+    @include transition(fill);
+    :hover > &,
+    :focus > & {
+      fill: $white-color;
+    }
+  }
+}

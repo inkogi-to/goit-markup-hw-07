@@ -1,0 +1,25 @@
+.hero {
+  @include flex(center, center, column);
+
+  padding: 200px 0;
+  max-width: 1600px;
+  margin: 0 auto;
+
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/bg-header.jpg);
+
+  &__title {
+    margin-bottom: 30px;
+
+    max-width: 695px;
+    @include font-style(44px, 60px, 0.06em, 900, uppercase);
+    text-align: center;
+    color: $white-color;
+  }
+
+  &__btn {
+    @include button;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
